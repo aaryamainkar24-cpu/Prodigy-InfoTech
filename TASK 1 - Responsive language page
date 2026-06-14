@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BlueTech Solutions</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8fafc;
+}
+
+/* Navbar */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:#0a2540;
+    z-index:1000;
+    transition:0.3s;
+}
+
+nav.scrolled{
+    background:#ffffff;
+    box-shadow:0 3px 15px rgba(0,0,0,0.08);
+}
+
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:700;
+}
+
+nav.scrolled .logo{
+    color:#0a2540;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav.scrolled ul li a{
+    color:#0a2540;
+}
+
+nav ul li a:hover{
+    color:#60a5fa;
+}
+
+/* Sections */
+
+section{
+    min-height:100vh;
+    padding:120px 10%;
+}
+
+/* Hero */
+
+#home{
+    background:linear-gradient(135deg,#0a2540,#1e3a8a);
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+#home h1{
+    font-size:56px;
+    margin-bottom:20px;
+}
+
+#home p{
+    font-size:18px;
+    max-width:700px;
+}
+
+.btn{
+    margin-top:30px;
+    padding:14px 30px;
+    background:#60a5fa;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#3b82f6;
+}
+
+/* About */
+
+#about{
+    background:white;
+    text-align:center;
+}
+
+#about h2{
+    color:#0a2540;
+    margin-bottom:20px;
+    font-size:38px;
+}
+
+#about p{
+    max-width:700px;
+    margin:auto;
+    color:#475569;
+    line-height:1.8;
+}
+
+/* Services */
+
+#services{
+    background:#eff6ff;
+    text-align:center;
+}
+
+#services h2{
+    color:#0a2540;
+    margin-bottom:50px;
+    font-size:38px;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    width:280px;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#64748b;
+}
+
+/* Statistics */
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:80px;
+    margin-top:60px;
+    flex-wrap:wrap;
+}
+
+.stat h3{
+    font-size:42px;
+    color:#2563eb;
+}
+
+.stat p{
+    color:#475569;
+}
+
+/* Contact */
+
+#contact{
+    background:#0a2540;
+    color:white;
+    text-align:center;
+}
+
+#contact h2{
+    margin-bottom:25px;
+    font-size:38px;
+}
+
+.contact-box{
+    background:rgba(255,255,255,0.08);
+    max-width:500px;
+    margin:auto;
+    padding:30px;
+    border-radius:15px;
+}
+
+.contact-box p{
+    margin:12px 0;
+    font-size:17px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav id="navbar">
+    <div class="logo">BlueTech</div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="home">
+    <h1>Building Digital Experiences</h1>
+    <p>
+        Creating modern, responsive and user-friendly web solutions
+        with clean design and smooth user interaction.
+    </p>
+
+    <a href="#about" class="btn">Explore More</a>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+
+    <p>
+        We specialize in developing modern websites and digital
+        experiences focused on performance, usability and design.
+        Our goal is to create solutions that help businesses grow.
+    </p>
+
+    <div class="stats">
+        <div class="stat">
+            <h3>50+</h3>
+            <p>Projects</p>
+        </div>
+
+        <div class="stat">
+            <h3>25+</h3>
+            <p>Clients</p>
+        </div>
+
+        <div class="stat">
+            <h3>100%</h3>
+            <p>Satisfaction</p>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+
+    <h2>Our Services</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Web Development</h3>
+            <p>Modern and responsive websites built for performance.</p>
+        </div>
+
+        <div class="card">
+            <h3>UI/UX Design</h3>
+            <p>Clean and intuitive interfaces focused on users.</p>
+        </div>
+
+        <div class="card">
+            <h3>Technical Support</h3>
+            <p>Reliable maintenance and support for your solutions.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact">
+
+    <h2>Contact Us</h2>
+
+    <div class="contact-box">
+        <p>📧 abc@example.com</p>
+        <p>📱 +91 0000011111</p>
+        <p>📍 Pune, Maharashtra, India</p>
+    </div>
+
+</section>
+
+<script>
+
+window.addEventListener("scroll",function(){
+
+    const navbar=document.getElementById("navbar");
+
+    if(window.scrollY>50){
+        navbar.classList.add("scrolled");
+    }
+    else{
+        navbar.classList.remove("scrolled");
+    }
+
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+    anchor.addEventListener("click",function(e){
+
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href"))
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
