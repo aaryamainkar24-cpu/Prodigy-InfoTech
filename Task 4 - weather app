@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather App</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+}
+
+.container{
+    width:450px;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+}
+
+h1{
+    color:#1e3a8a;
+    margin-bottom:20px;
+}
+
+input{
+    width:70%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+button{
+    padding:12px 18px;
+    border:none;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    margin-left:5px;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+.weather{
+    margin-top:25px;
+    background:#eff6ff;
+    padding:20px;
+    border-radius:12px;
+}
+
+.weather h2{
+    color:#1e3a8a;
+    margin-bottom:10px;
+}
+
+.weather p{
+    margin:8px 0;
+    color:#334155;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Weather Dashboard</h1>
+
+    <input type="text" id="city" placeholder="Enter City Name">
+    <button onclick="getWeather()">Search</button>
+
+    <div class="weather">
+        <h2 id="location">City Name</h2>
+        <p id="temp">Temperature: -- °C</p>
+        <p id="condition">Condition: --</p>
+        <p id="humidity">Humidity: --%</p>
+        <p id="wind">Wind Speed: -- km/h</p>
+    </div>
+
+</div>
+
+<script>
+
+function getWeather(){
+
+    let city = document.getElementById("city").value.toLowerCase();
+
+    let weatherData = {
+
+        pune:{
+            temp:28,
+            condition:"Cloudy",
+            humidity:65,
+            wind:12
+        },
+
+        mumbai:{
+            temp:31,
+            condition:"Sunny",
+            humidity:78,
+            wind:15
+        },
+
+        delhi:{
+            temp:35,
+            condition:"Hot",
+            humidity:40,
+            wind:10
+        },
+
+        bangalore:{
+            temp:24,
+            condition:"Pleasant",
+            humidity:60,
+            wind:8
+        }
+    };
+
+    if(weatherData[city]){
+
+        document.getElementById("location").innerHTML =
+            city.toUpperCase();
+
+        document.getElementById("temp").innerHTML =
+            "Temperature: " + weatherData[city].temp + " °C";
+
+        document.getElementById("condition").innerHTML =
+            "Condition: " + weatherData[city].condition;
+
+        document.getElementById("humidity").innerHTML =
+            "Humidity: " + weatherData[city].humidity + "%";
+
+        document.getElementById("wind").innerHTML =
+            "Wind Speed: " + weatherData[city].wind + " km/h";
+
+    }else{
+        alert("City data not available!");
+    }
+}
+
+</script>
+
+</body>
+</html>
